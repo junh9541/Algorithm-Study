@@ -11,7 +11,11 @@ def solution(k, dungeons):
 #순열 재귀
 def permutation(count, k, dungeons):
     global answer
-# 조건 1: count가 answer보다 클 때
+    # 조건 1: 던전을 다 돌았을 때
+    if count==len(dungeons):
+        answer=max(answer, count)
+        return
+    # 조건 2: count가 answer보다 클 때
     if count>answer:
         answer=count
     for i in range(len(dungeons)):
