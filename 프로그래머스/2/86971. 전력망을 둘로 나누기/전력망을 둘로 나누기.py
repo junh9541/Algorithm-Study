@@ -5,7 +5,6 @@ def solution(n, wires):
     return answer
 
 def checkWires(wires, n):
-    checked=0
     nodesNum=len(set(sum(wires, [])))
     nodes=set([])
     if len(wires)==1:
