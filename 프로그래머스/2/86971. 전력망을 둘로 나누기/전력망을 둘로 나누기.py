@@ -13,11 +13,9 @@ def checkWires(wires, n):
     for i in range(len(wires)):
         for j , wire in enumerate(wires):
             newNodes = nodes.union(wire)
-            # print(newNodes)
             if len(newNodes)==2 or len(newNodes)-len(nodes)==1:
                 nodes=newNodes
     
-    print(wires, nodes, abs(n-len(nodes)*2))
     return abs(n-len(nodes)* 2)
     
     
