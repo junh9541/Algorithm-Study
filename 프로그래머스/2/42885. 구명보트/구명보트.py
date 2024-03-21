@@ -1,4 +1,6 @@
-import heapq
+# 1. 정렬, 이중루프: 타임아웃
+# 2. 정렬, 힙: 타임아웃(큐로 해도 가능했음)
+# 3. 정렬, 큐: 성공
 
 def solution(people, limit):
     answer=0
