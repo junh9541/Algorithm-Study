@@ -1,9 +1,10 @@
 from collections import deque
+# LIFO 큐
 
 def solution(prices):
     MAX=100*1000+1
     answer = [0 for _ in range(len(prices))]
-    stackPrices=deque([])
+    stackPrices=[]
     
     for i in range(len(prices)):
         if not(len(stackPrices)):
