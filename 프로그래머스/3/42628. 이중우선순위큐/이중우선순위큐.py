@@ -15,10 +15,9 @@ def solution(operations):
     length = 0
     for text in operations:
         command = convertString(text)
-        print(command)
+        
         if length==0:
-            maxHeap=[]
-            minHeap=[]
+            maxHeap, minHeap=[], []
         if command=="max":
             if length>0:
                 heappop(maxHeap)
@@ -31,7 +30,6 @@ def solution(operations):
             heappush(minHeap, command)
             heappush(maxHeap, (-command, command))
             length+=1
-        print(minHeap, "|", maxHeap, "|", length)
     if length==0:
         return [0, 0]
     else:
