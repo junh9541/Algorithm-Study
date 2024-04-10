@@ -1,7 +1,7 @@
 from heapq import heapify, heappop, heappush
 import math
 def solution(jobs):
-    startTimeHeap=[tuple(v) for v in jobs[:]]
+    startTimeHeap=[tuple(v) for v in jobs]
     heapify(startTimeHeap)
     workTimeHeap=[]
     
